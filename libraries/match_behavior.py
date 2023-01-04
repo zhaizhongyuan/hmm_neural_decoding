@@ -6,7 +6,7 @@ import pickle
 
 import numpy as np
 
-from typing import List, Union
+from typing import List, Tuple
 
 from data_loader import data_loader
 from behavior_loader import bsoid_loader
@@ -82,7 +82,7 @@ class match_behavior:
         return hmm_states
 
 
-    def hmm_state_to_behavior(self, lead_seconds: float, lag_seconds: float, verbose=False) -> Union[np.ndarray, np.ndarray]:
+    def hmm_state_to_behavior(self, lead_seconds: float, lag_seconds: float, verbose=False) -> Tuple[np.ndarray, np.ndarray]:
         
         def most_freq_behav_idx(uniq_behavs, uniq_behavs_cnts):
             uniq_behavs_indcs = np.argsort(-uniq_behavs_cnts)  
