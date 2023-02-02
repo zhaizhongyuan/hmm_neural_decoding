@@ -85,6 +85,7 @@ class bsoid_loader:
         self.smoothed_predictions = []
 
     def main(self, smooth_window=6):
+        print(f'smooth window: {smooth_window}')
         print('File #{} (a {} body parts by {} frames) '
               'has {} classes'.format(self.f_index, int(self.filtered_data[self.f_index].shape[1] / 2),
                                       self.filtered_data[self.f_index].shape[0],
