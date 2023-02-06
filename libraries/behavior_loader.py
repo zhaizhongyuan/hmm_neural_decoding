@@ -77,7 +77,7 @@ class bsoid_loader:
                                                round(time_of_nest[0]*60*60*60 +
                                                      time_of_nest[1]*60*60 +
                                                      time_of_nest[2]*60):, 11] < y_tobefiltered[1]))[0]
-            print('mouse stayed in nest for {}% of time'.format(
+            print('Mouse stayed in nest for {}% of time'.format(
                 100 * index_tobefiltered.shape[0] /
                 self.filtered_data[self.f_index][:, 10].shape[0]))
             index_tobefiltered = index_tobefiltered[index_tobefiltered < self.new_predictions[self.f_index].shape[0]]
@@ -85,7 +85,7 @@ class bsoid_loader:
         self.smoothed_predictions = []
 
     def main(self, smooth_window=6):
-        print(f'smooth window: {smooth_window}')
+        print(f'Smooth window: {smooth_window}')
         print('File #{} (a {} body parts by {} frames) '
               'has {} classes'.format(self.f_index, int(self.filtered_data[self.f_index].shape[1] / 2),
                                       self.filtered_data[self.f_index].shape[0],
